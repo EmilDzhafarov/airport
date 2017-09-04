@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="369.0" prefWidth="436.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.nure.dzhafarov.airport.Control.ControllerUpdateFlight">
+   <children>
+      <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="320.0" text="Редактирование полета" textAlignment="CENTER" textFill="#244bc9">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Label>
+      <Label layoutX="14.0" layoutY="106.0" text="Номер" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="146.0" text="Точка отправления" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="140.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="190.0" text="Точка прибытия" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="180.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="233.0" text="Авиакомпания-перевозчик" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="220.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="271.0" text="Отправление" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="260.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Text fx:id="mistakeText" fill="RED" layoutX="14.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="288.99999928474426" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="316.892578125">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="numberFlight" disable="true" editable="false" layoutX="244.0" layoutY="98.0" prefHeight="25.0" prefWidth="172.0" AnchorPane.rightAnchor="20.0" />
+      <TextField fx:id="departureFrom" disable="true" editable="false" layoutX="244.0" layoutY="138.0" prefHeight="25.0" prefWidth="172.0" AnchorPane.rightAnchor="20.0" />
+      <TextField fx:id="arrivalIn" disable="true" editable="false" layoutX="244.0" layoutY="178.0" prefHeight="25.0" prefWidth="172.0" AnchorPane.rightAnchor="20.0" />
+      <TextField fx:id="airline" disable="true" editable="false" layoutX="244.0" layoutY="218.0" prefHeight="25.0" prefWidth="172.0" AnchorPane.rightAnchor="20.0" />
+      <Spinner fx:id="departureHour" layoutX="144.0" layoutY="258.0" prefHeight="25.0" prefWidth="63.0" AnchorPane.rightAnchor="229.0" />
+      <Label layoutX="216.0" layoutY="260.0" text=":" AnchorPane.rightAnchor="215.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="departureMinute" layoutX="229.0" layoutY="258.0" prefHeight="25.0" prefWidth="63.0" AnchorPane.rightAnchor="144.0" />
+      <Button layoutX="318.0" layoutY="312.0" mnemonicParsing="false" onAction="#onClickUpdate" prefHeight="30.0" prefWidth="98.0" text="Сохранить" textFill="#244bc9" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="departureDate" layoutX="303.0" layoutY="258.0" prefHeight="25.0" prefWidth="111.0" showWeekNumbers="true" AnchorPane.rightAnchor="20.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.nure.dzhafarov.airport.Control.ControllerForDetailsPaymaster">
+   <children>
+      <Label fx:id="infoLabel" layoutX="14.0" layoutY="14.0" text="Список пассажиров " textFill="#244bc9">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Label>
+      <TableView fx:id="passengersTable" layoutX="14.0" layoutY="80.0" prefHeight="377.0" prefWidth="715.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="80.0">
+        <columns>
+          <TableColumn fx:id="firstName" prefWidth="75.0" style="-fx-alignment: CENTER;" text="Имя" />
+          <TableColumn fx:id="lastName" prefWidth="75.0" style="-fx-alignment: CENTER;" text="Фамилия" />
+            <TableColumn fx:id="middleName" prefWidth="75.0" style="-fx-alignment: CENTER;" text="Отчество" />
+            <TableColumn fx:id="passportNumber" prefWidth="75.0" style="-fx-alignment: CENTER;" text="Номер паспорта" />
+            <TableColumn fx:id="discountColumn" prefWidth="75.0" style="-fx-alignment: CENTER;" text="Привелегия" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

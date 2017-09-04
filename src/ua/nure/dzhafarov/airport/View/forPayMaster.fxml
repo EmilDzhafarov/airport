@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="1100.0" prefHeight="611.0" prefWidth="1279.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.nure.dzhafarov.airport.Control.ControllerForPaymaster">
+   <children>
+      <SplitPane dividerPositions="0.35091743119266056" layoutX="78.0" layoutY="119.0" prefHeight="528.0" prefWidth="874.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxWidth="314.0" minHeight="0.0" minWidth="0.0" prefHeight="526.0" prefWidth="314.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Персональные данные клиента" textFill="#244bc9">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="162.0" text="Имя" AnchorPane.leftAnchor="15.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="205.0" text="Фамилия" AnchorPane.leftAnchor="15.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="249.0" text="Отчество" AnchorPane.leftAnchor="15.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="294.0" text="Дата рождения" AnchorPane.leftAnchor="15.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="9.0" layoutY="81.0" text="Номер паспорта" AnchorPane.leftAnchor="14.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="341.0" text="Гражданство" AnchorPane.leftAnchor="15.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="passNum" layoutX="147.0" layoutY="79.0" promptText="Номер паспорта" />
+                  <CheckBox fx:id="checkBoxForCheckPassNum" layoutX="11.0" layoutY="121.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#onClickEnterPassword" text="Уже бронировал билеты">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <TextField fx:id="firstName" layoutX="149.0" layoutY="160.0" promptText="Имя" />
+                  <TextField fx:id="lastName" layoutX="148.0" layoutY="203.0" promptText="Фамилия" />
+                  <TextField fx:id="middleName" layoutX="148.0" layoutY="247.0" promptText="Отчество" />
+                  <TextField fx:id="nationality" layoutX="148.0" layoutY="339.0" prefHeight="25.0" prefWidth="149.0" promptText="Гражданство" />
+                  <DatePicker fx:id="birthday" layoutX="148.0" layoutY="292.0" prefHeight="25.0" prefWidth="149.0" promptText="Дата рождения" />
+                  <Button layoutX="13.0" layoutY="448.0" mnemonicParsing="false" onAction="#onClickReservePassenger" prefHeight="30.0" prefWidth="133.0" text="Забронировать">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="14.0" layoutY="42.0" prefHeight="20.0" prefWidth="280.0" />
+                  <Separator layoutX="16.0" layoutY="418.0" prefHeight="20.0" prefWidth="280.0" />
+                  <Text fx:id="mistakeText" fill="#eb1010" layoutX="15.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="286.99999782443047">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="15.0" layoutY="383.0" text="Скидка" AnchorPane.leftAnchor="15.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="discount" layoutX="148.0" layoutY="381.0" prefWidth="150.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="600.0" prefHeight="526.0" prefWidth="600.0">
+               <children>
+                  <SplitPane dividerPositions="0.5" layoutX="46.0" layoutY="63.0" orientation="VERTICAL" prefHeight="526.0" prefWidth="816.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane maxHeight="250.0" minHeight="0.0" minWidth="800.0" prefHeight="250.0" prefWidth="160.0">
+                           <children>
+                              <AnchorPane maxHeight="260.0" minHeight="0.0" minWidth="800.0" prefHeight="260.0" prefWidth="814.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Выбор рейса" textFill="#244bc9" AnchorPane.leftAnchor="14.0">
+                                       <font>
+                                          <Font name="System Bold" size="23.0" />
+                                       </font>
+                                       <effect>
+                                          <Reflection fraction="0.57" />
+                                       </effect>
+                                    </Label>
+                                    <Label layoutX="21.0" layoutY="83.0" text="Направление" AnchorPane.leftAnchor="14.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="21.0" layoutY="125.0" text="Дата вылета" AnchorPane.leftAnchor="14.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="departureFrom" layoutX="139.0" layoutY="81.0" prefHeight="25.0" prefWidth="176.0" promptText="Откуда" />
+                                    <TextField fx:id="arrivalIn" layoutX="422.0" layoutY="81.0" prefHeight="25.0" prefWidth="176.0" promptText="Куда" />
+                                    <DatePicker fx:id="flightDate" layoutX="139.0" layoutY="123.0" prefHeight="25.0" prefWidth="176.0" promptText="Отправление" />
+                                    <Label layoutX="21.0" layoutY="168.0" text="Класс комфортности" AnchorPane.leftAnchor="14.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="comfortClass" layoutX="180.0" layoutY="166.0" prefHeight="25.0" prefWidth="176.0" />
+                                    <Button layoutX="15.0" layoutY="208.0" mnemonicParsing="false" onAction="#onClickSearchFlight" prefHeight="30.0" prefWidth="113.0" text="Найти рейс" AnchorPane.leftAnchor="14.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="805.0" layoutY="14.0" onMouseClicked="#onClickChangePassword" text="Сменить пароль входа" textAlignment="RIGHT" underline="true" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="10.0">
+                                       <font>
+                                          <Font name="System Italic" size="13.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                    <ImageView fitHeight="58.0" fitWidth="93.0" layoutX="329.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../arrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="800.0" prefHeight="340.0" prefWidth="825.0">
+                           <children>
+                              <Label fx:id="infoLabel" layoutX="14.0" layoutY="14.0" text="Доступные рейсы" AnchorPane.leftAnchor="14.0">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="flightsTable" layoutX="24.0" layoutY="54.0" prefHeight="272.0" prefWidth="772.0" style="-fx-alignment: CENTER;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="54.0">
+                                 <columns>
+                                    <TableColumn fx:id="flightNumberColumn" editable="false" minWidth="75.0" prefWidth="75.0" sortable="false" style="-fx-alignment: CENTER;" text="Номер" />
+                                    <TableColumn fx:id="departureFromColumn" editable="false" minWidth="104.0" prefWidth="104.0" sortable="false" style="-fx-alignment: CENTER;" text="Откуда" />
+                                    <TableColumn fx:id="arrivalInColumn" editable="false" minWidth="90.0" prefWidth="90.0" sortable="false" style="-fx-alignment: CENTER;" text="Куда" />
+                                    <TableColumn fx:id="airlineColumn" editable="false" minWidth="95.0" prefWidth="93.370361328125" sortable="false" style="-fx-alignment: CENTER;" text="Авиакомпания" />
+                                    <TableColumn fx:id="departureColumn" editable="false" minWidth="110.0" prefWidth="109.58843994140625" sortable="false" style="-fx-alignment: CENTER;" text="Отправление" />
+                                    <TableColumn fx:id="arrivalColumn" editable="false" minWidth="110.0" prefWidth="110.0" sortable="false" style="-fx-alignment: CENTER;" text="Прибытие" />
+                                    <TableColumn fx:id="classColumn" editable="false" minWidth="103.0" prefWidth="103.0" sortable="false" style="-fx-alignment: CENTER;" text="Класс" />
+                                    <TableColumn fx:id="ticketCostColumn" editable="false" minWidth="108.0" prefWidth="108.0" sortable="false" style="-fx-alignment: CENTER;" text="Стоимость ($)" />
+                                    <TableColumn fx:id="freePlacesColumn" editable="false" minWidth="123.0" prefWidth="123.0" sortable="false" style="-fx-alignment: CENTER;" text="Свободные места" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

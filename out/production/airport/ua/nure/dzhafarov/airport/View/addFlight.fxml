@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="417.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.nure.dzhafarov.airport.Control.ControllerAddFlight">
+   <children>
+      <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="385.0" text="Добавление полета" textAlignment="CENTER" textFill="#244bc9">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Label>
+      <Label layoutX="14.0" layoutY="106.0" text="Номер" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="146.0" text="Точка отправления" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="140.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="190.0" text="Точка прибытия" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="180.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="233.0" text="Авиакомпания-перевозчик" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="220.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="271.0" text="Отправление" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="260.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Text fx:id="mistakeText" fill="RED" layoutX="18.0" layoutY="567.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="248.99999928474426" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="550.8134765625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="number" layoutX="244.0" layoutY="98.0" prefHeight="25.0" prefWidth="172.0" promptText="Номер" AnchorPane.rightAnchor="20.0" />
+      <TextField fx:id="departureFrom" layoutX="244.0" layoutY="138.0" prefHeight="25.0" prefWidth="172.0" promptText="Откуда" AnchorPane.rightAnchor="20.0" />
+      <TextField fx:id="arrivalIn" layoutX="244.0" layoutY="178.0" prefHeight="25.0" prefWidth="172.0" promptText="Куда" AnchorPane.rightAnchor="20.0" />
+      <TextField fx:id="airline" layoutX="244.0" layoutY="218.0" prefHeight="25.0" prefWidth="172.0" promptText="Авиакомпания" AnchorPane.rightAnchor="20.0" />
+      <Spinner fx:id="departureHour" layoutX="144.0" layoutY="258.0" prefHeight="25.0" prefWidth="63.0" AnchorPane.rightAnchor="229.0" />
+      <Label layoutX="216.0" layoutY="260.0" text=":" AnchorPane.rightAnchor="215.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="departureMinute" layoutX="229.0" layoutY="258.0" prefHeight="25.0" prefWidth="63.0" AnchorPane.rightAnchor="144.0" />
+      <Button layoutX="286.0" layoutY="572.0" mnemonicParsing="false" onAction="#onClickAddFlight" prefHeight="37.0" prefWidth="111.0" text="Добавить" textFill="#244bc9" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#47a7c9" />
+         </effect>
+      </Button>
+      <DatePicker fx:id="departureDate" editable="false" layoutX="303.0" layoutY="258.0" prefHeight="25.0" prefWidth="111.0" showWeekNumbers="true" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="15.0" layoutY="301.0" text="Длительность полета">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="durationHour" layoutX="186.0" layoutY="299.0" prefHeight="25.0" prefWidth="63.0" />
+      <Label layoutX="259.0" layoutY="301.0" text=":">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="durationMinute" layoutX="272.0" layoutY="299.0" prefHeight="25.0" prefWidth="63.0" />
+      <ScrollPane layoutX="18.0" layoutY="378.0" prefHeight="162.0" prefWidth="385.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="145.0" prefWidth="677.0">
+               <children>
+                  <CheckBox fx:id="economClass" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#onClickEconomClass" selected="true" text="Эконом">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="businessClass" layoutX="187.0" layoutY="11.0" mnemonicParsing="false" onAction="#onClickBusinessClass" text="Бизнесс">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="firstClass" layoutX="360.0" layoutY="11.0" mnemonicParsing="false" onAction="#onClickFirstClass" text="Первый">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="anotherClass" layoutX="535.0" layoutY="11.0" mnemonicParsing="false" onAction="#onClickAnotherClass" text="Другой">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </CheckBox>
+                  <TextField fx:id="economClassPlaces" layoutX="14.0" layoutY="75.0" prefHeight="25.0" prefWidth="130.0" promptText="Количество мест" />
+                  <TextField fx:id="businessClassPlaces" layoutX="187.0" layoutY="75.0" prefHeight="25.0" prefWidth="130.0" promptText="Количество мест" visible="false" />
+                  <TextField fx:id="firstClassPlaces" layoutX="360.0" layoutY="75.0" prefHeight="25.0" prefWidth="130.0" promptText="Количество мест" visible="false" />
+                  <TextField fx:id="anotherClassPlaces" layoutX="530.0" layoutY="75.0" prefHeight="25.0" prefWidth="130.0" promptText="Количество мест" visible="false" />
+                  <TextField fx:id="economClassCost" layoutX="14.0" layoutY="40.0" prefHeight="24.0" prefWidth="110.0" promptText="Стоимость ($)">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="businessClassCost" layoutX="187.0" layoutY="41.0" prefHeight="25.0" prefWidth="110.0" promptText="Стоимость ($)" visible="false" />
+                  <TextField fx:id="firstClassCost" layoutX="360.0" layoutY="39.0" prefHeight="25.0" prefWidth="110.0" promptText="Стоимость ($)" visible="false" />
+                  <TextField fx:id="anotherClassCost" layoutX="530.0" layoutY="39.0" prefHeight="25.0" prefWidth="110.0" promptText="Стоимость ($)" visible="false" />
+                  <TextField fx:id="anotherClassName" layoutX="530.0" layoutY="110.0" prefHeight="25.0" prefWidth="130.0" promptText="Название" visible="false" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Label layoutX="18.0" layoutY="343.0" text="Выберите классы комфортнсти:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

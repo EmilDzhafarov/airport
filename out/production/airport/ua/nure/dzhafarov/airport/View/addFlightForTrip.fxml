@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="412.0" prefWidth="417.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.nure.dzhafarov.airport.Control.ControllerAddFlightForTrip">
+   <children>
+      <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="413.0" text="Добавление полета" textAlignment="CENTER" textFill="#244bc9">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Label>
+      <Label layoutX="14.0" layoutY="106.0" text="Номер" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="146.0" text="Точка отправления" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="140.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="190.0" text="Точка прибытия" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="180.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="233.0" text="Авиакомпания-перевозчик" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="220.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="301.0" text="Отправление" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="301.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Text fx:id="mistakeText" fill="RED" layoutX="15.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="248.99999928474426" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="360.8134765625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="number" disable="true" layoutX="244.0" layoutY="98.0" prefHeight="25.0" prefWidth="172.0" promptText="Номер" AnchorPane.rightAnchor="20.0" />
+      <TextField fx:id="departureFrom" disable="true" layoutX="244.0" layoutY="138.0" prefHeight="25.0" prefWidth="172.0" promptText="Откуда" AnchorPane.rightAnchor="20.0" />
+      <TextField fx:id="arrivalIn" disable="true" layoutX="244.0" layoutY="178.0" prefHeight="25.0" prefWidth="172.0" promptText="Куда" AnchorPane.rightAnchor="20.0" />
+      <TextField fx:id="airline" disable="true" layoutX="244.0" layoutY="218.0" prefHeight="25.0" prefWidth="172.0" promptText="Авиакомпания" AnchorPane.rightAnchor="20.0" />
+      <Spinner fx:id="departureHour" layoutX="129.0" layoutY="299.0" prefHeight="25.0" prefWidth="63.0" AnchorPane.rightAnchor="225.0" />
+      <Label layoutX="270.0" layoutY="260.0" text=":" AnchorPane.rightAnchor="142.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="departureMinute" layoutX="213.0" layoutY="299.0" prefHeight="25.0" prefWidth="63.0" AnchorPane.rightAnchor="141.0" />
+      <Button layoutX="286.0" layoutY="352.0" mnemonicParsing="false" onAction="#onClickAddFlight" prefHeight="37.0" prefWidth="111.0" text="Добавить" textFill="#244bc9" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#47a7c9" />
+         </effect>
+      </Button>
+      <DatePicker fx:id="departureDate" editable="false" layoutX="285.0" layoutY="299.0" prefHeight="25.0" prefWidth="111.0" showWeekNumbers="true" AnchorPane.rightAnchor="21.0" />
+      <Label layoutX="15.0" layoutY="260.0" text="Длительность полета">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="durationHour" disable="true" layoutX="201.0" layoutY="258.0" prefHeight="25.0" prefWidth="63.0" AnchorPane.rightAnchor="153.0" />
+      <Label layoutX="201.0" layoutY="301.0" text=":" AnchorPane.rightAnchor="211.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="durationMinute" disable="true" layoutX="280.0" layoutY="258.0" prefHeight="25.0" prefWidth="63.0" AnchorPane.rightAnchor="74.0" />
+   </children>
+</AnchorPane>
